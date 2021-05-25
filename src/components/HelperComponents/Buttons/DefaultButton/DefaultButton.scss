@@ -1,0 +1,189 @@
+.default_button_wrapper {
+  .default_button {
+    display: inline-flex;
+    min-width: 160px;
+    height: 50px;
+    text-align: center;
+    text-transform: none;
+    font-family: var(--regular-font);
+    font-size: 14px;
+    border-radius: var(--medium-radius);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    white-space: nowrap;
+    box-shadow: none;
+
+    &:disabled {
+      opacity: 0.5;
+      box-shadow: none;
+    }
+
+    &.default_button_contained {
+      color: var(--white);
+      background-color: var(--blue);
+      border: 1px solid var(--blue);
+
+      &:hover, &:focus {
+        background-color: darken(#356BF5, 10%);
+        border-color: darken(#356BF5, 10%);
+      }
+
+      &.pink_btn {
+        background-color: var(--pink);
+        border: 1px solid var(--pink);
+
+        &:hover, &:focus {
+          background-color: darken(#FA2B76, 10%);
+          border-color: darken(#FA2B76, 10%);
+        }
+      }
+
+      &.wide_with_icon {
+        min-width: 225px;
+        font-family: var(--medium-font);
+        background-color: #2A2F38;
+        border: 1px solid #17191C;
+
+        img {
+          margin-right: 15px;
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &.default_button_outlined {
+      color: var(--blue);
+      border: 1px solid var(--blue);
+
+      &.cancel_btn {
+        color: var(--white);
+        border: 1px solid var(--white);
+
+        &:hover, &:focus {
+          background-color: var(--black);
+        }
+      }
+
+      &.blue_btn {
+        color: #0253B3;
+        border: 1px solid #0253B3;
+      }
+
+      &.delete_btn {
+        color: #D0021B;
+        border: 1px solid #D0021B;
+      }
+    }
+
+    div {
+      color: var(--white);
+    }
+  }
+
+  .wide_btn {
+    min-width: 245px;
+  }
+
+  .full_btn_width {
+    width: 100%;
+  }
+}
+
+.buy-error {
+  span {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  h1 {
+    color: #334150;
+    font-family: var(--bold-font);
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 300;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #C2D1D9;
+  }
+
+  .default_button_wrapper {
+    margin-top: 25px;
+
+    .buy-error-ok {
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button {
+      /*margin-top: 20px;*/
+      span {
+        position: relative;
+        width: auto;
+        height: 15px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.info-success-buy {
+  display: flex;
+  width: 420px;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  left: 50%;
+  bottom: 10%;
+  transform: translate(-50%);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background: #fff;
+  z-index: 10;
+  border-radius: 5px;
+
+  & > div {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    & > p {
+      color: #334150;
+      font-family: var(--regular-font);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+
+    & > span {
+      margin-right: 5px;
+
+      & > img {
+        margin-top: -2.5px;
+      }
+    }
+  }
+
+  span.close {
+    cursor: pointer;
+  }
+}
+
+button:disabled {
+  background: grey;
+  opacity: 0.65;
+  cursor: not-allowed;
+}

@@ -1,0 +1,91 @@
+.default_dialog_root {
+    .paper_custom_dialog {
+        min-width: 720px;
+        width: 100%;
+        background-color: var(--gray);
+        border-radius: var(--big-radius);
+        box-shadow: none;
+    }
+
+    .dialog_close_button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        cursor: pointer;
+        background: transparent;
+        transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -ms-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.dialog_wrapper {
+    position: relative;
+    overflow: auto;
+    padding: 50px 65px;
+    max-height: 850px;
+    color: var(--main-color);
+    .ban-error-message {
+        color: red;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-border-radius: 2px;
+
+        background: #edf2f8;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: grey;
+    }
+
+    &::-webkit-scrollbar-thumb:window-inactive {
+        background: grey;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-family: var(--bold-font);
+        font-size: 28px;
+        line-height: 40px;
+        color: var(--white);
+    }
+
+    &__desc {
+        margin-bottom: 15px;
+
+        b {
+            margin-left: 5px;
+            margin-right: 5px;
+            font-family: var(--medium-font);
+            font-weight: 500;
+        }
+    }
+
+    &__yellow {
+        max-width: 475px;
+        color: var(--yellow);
+    }
+
+    &__btns {
+        display: flex;
+
+        .default_button_wrapper {
+            &:not(:last-of-type) {
+                margin-right: 15px;
+            }
+        }
+    }
+}

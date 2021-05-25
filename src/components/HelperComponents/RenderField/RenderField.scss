@@ -1,0 +1,93 @@
+.custom_input_wrapper {
+	width: 100%;
+	height: 50px;
+
+	&:hover {
+		.custom_input_outline {
+			border-color: var(--sub-color) !important;
+			transition: all 0.3s linear;
+		}
+	}
+
+	.custom_input_label {
+		transform: translate(24px, 18px) scale(1);
+		font-family: var(--regular-font);
+		font-size: 14px;
+		color: var(--sub-color);
+		transition: all 0.1s linear;
+
+		&.custom_input_label_focused {
+			font-family: var(--regular-font);
+			color: var(--sub-color);
+		}
+
+		&.custom_input_label_active {
+			transform: translate(0px, -14px) scale(0.75);
+			font-family: var(--regular-font);
+			color: var(--sub-color);
+		}
+
+		&.custom_input_label_error {
+			color: var(--yellow);
+		}
+	}
+
+	.custom_input {
+		font-family: var(--regular-font);
+		font-size: 14px;
+		color: var(--main-color);
+		background-color: var(--light-gray);
+		border-radius: var(--medium-radius);
+
+		&:focus {
+			background-color: var(--light-gray);
+		}
+
+		input {
+			height: 50px;
+			padding: 0 0 0 24px;
+		}
+
+		input[type="datetime-local"] {
+			text-transform: uppercase;
+		}
+
+		.custom_input_outline {
+			border-color: var(--light-gray);
+
+			legend {
+				width: 0 !important;
+			}
+		}
+
+		&.custom_input_active {
+			border-color: var(--yellow) !important;
+		}
+
+		&.custom_input_focused {
+			background-color: var(--light-gray);
+
+			.custom_input_outline {
+				border: 1px solid var(--sub-color);
+			}
+		}
+
+		&.custom_input_error, &.custom_input_error:hover {
+			.custom_input_outline {
+				border-color: var(--yellow) !important;
+			}
+		}
+
+	}
+}
+
+.error_text {
+	position: absolute;
+	bottom: -17px;
+	right: 0;
+	display: block;
+	font-family: var(--regular-font);
+	font-size: 12px;
+	line-height: 13px;
+	color: var(--yellow);
+}

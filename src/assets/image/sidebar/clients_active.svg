@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>clients_active</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="clients" transform="translate(-64.000000, -248.000000)">
+            <g id="clients_active" transform="translate(64.000000, 248.000000)">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                <g id="Group-2" transform="translate(2.000000, 1.000000)" fill="#008EFF" fill-rule="nonzero">
+                    <path d="M16,14 C18.209139,14 20,15.790861 20,18 L20,21 C20,21.5522847 19.5522847,22 19,22 L1,22 C0.44771525,22 0,21.5522847 0,21 L0,18 C0,15.790861 1.790861,14 4,14 L16,14 Z M16,16 L4,16 C2.9456382,16 2.08183488,16.8158778 2.00548574,17.8507377 L2,18 L2,20 L18,20 L18,18 C18,16.9456382 17.1841222,16.0818349 16.1492623,16.0054857 L16,16 Z M10,0 C13.3137085,0 16,2.6862915 16,6 C16,9.3137085 13.3137085,12 10,12 C6.6862915,12 4,9.3137085 4,6 C4,2.6862915 6.6862915,0 10,0 Z M10,2 C7.790861,2 6,3.790861 6,6 C6,8.209139 7.790861,10 10,10 C12.209139,10 14,8.209139 14,6 C14,3.790861 12.209139,2 10,2 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
