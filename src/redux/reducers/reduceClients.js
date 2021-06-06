@@ -21,6 +21,12 @@ export default function (state = INITIAL_STATE, action) {
                     ? JSON.parse(localStorage.history)
                     : [],
             }
+        case CLIENTS.CLEAR_MESSAGES:
+            return {
+                ...state,
+                messages: [],
+                loading: true,
+            }
         case CLIENTS.ADD_ROOM_HISTORY:
             const room_history = localStorage.history
                 ? JSON.parse(localStorage.history)

@@ -5,7 +5,11 @@ import DefaultButton from '../HelperComponents/Buttons/DefaultButton/DefaultButt
 import './Chat.scss'
 import Messages from './Messages'
 import { connect } from 'react-redux'
-import { getNewMessage, addToHistory } from '../../redux/actions/clientsActions'
+import {
+    getNewMessage,
+    addToHistory,
+    clearMessages,
+} from '../../redux/actions/clientsActions'
 import ReconnectingWebSocket from 'reconnecting-websocket'
 
 import sendIcon from '../../assets/image/send.svg'
@@ -52,6 +56,7 @@ class Chat extends Component {
     }
 
     componentWillUnmount() {
+        this.props.clearMessages()
         this.rws.close()
     }
 
@@ -148,6 +153,7 @@ const mapDispatchToProps = {
     getNewMessage,
     reset: () => reset('ChatForm'),
     addToHistory,
+    clearMessages,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Chat)

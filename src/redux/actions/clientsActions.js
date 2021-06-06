@@ -19,3 +19,9 @@ export function addToHistory(room_id) {
         payload: room_id
     }
 }
+
+export function clearMessages() {
+    return {
+        type: CLIENTS.CLEAR_MESSAGES,
+    }
+}
