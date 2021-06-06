@@ -40,11 +40,6 @@ class Chat extends Component {
         this.rws.addEventListener('open', () => {
             console.log('connected')
             if (!connected) {
-                this.rws.send(
-                    JSON.stringify({
-                        action: 'getRecentMessages',
-                    })
-                )
                 this.setState({ connected: true })
             }
         })
@@ -53,6 +48,12 @@ class Chat extends Component {
             this.setState({ loading: false })
             getNewMessage(JSON.parse(event.data))
         })
+
+        this.rws.send(
+            JSON.stringify({
+                action: 'getRecentMessages',
+            })
+        )
     }
 
     componentWillUnmount() {
