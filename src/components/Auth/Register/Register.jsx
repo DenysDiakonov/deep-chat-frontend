@@ -95,12 +95,12 @@ class Register extends Component {
 const validate = values => {
     const errors = {}
     if (!values.username) {
-        errors.username = 'Обязательное поле'
+        errors.username = "Обов'язкове поле"
     }
     if (!values.password) {
-        errors.password = 'Обязательное поле'
+        errors.password = "Обов'язкове поле"
     } else if (values.password.length < 3) {
-        errors.password = 'Должно быть 3 или более символов'
+        errors.password = 'Має бути 3 або більше символів'
     }
     return errors
 }
