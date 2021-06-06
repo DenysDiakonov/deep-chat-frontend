@@ -50,8 +50,8 @@ class Register extends Component {
             <form
                 className='auth_form'
                 onSubmit={handleSubmit(this.submitForm)}>
-                <h1 className='auth_form__title'>Регистрация</h1>
-                <p className='auth_form__subtitle'>Создайте свой аккаунт</p>
+                <h1 className='auth_form__title'>Реєстрація</h1>
+                <p className='auth_form__subtitle'>Створіть власний акаунт</p>
                 <Field
                     name='username'
                     type='text'
@@ -71,7 +71,7 @@ class Register extends Component {
                         disabled={submitting || pristine || !valid}
                         loading={loading}
                         formAction>
-                        Зарегистрироваться
+                        Зареєструватися
                     </DefaultButton>
                     {authError ? (
                         <TooltipMessage
@@ -86,7 +86,7 @@ class Register extends Component {
                         ''
                     )}
                 </div>
-                <Link to={'/auth/login'}>Авторизация</Link>
+                <Link to={'/auth/login'}>Вхід у систему</Link>
             </form>
         )
     }

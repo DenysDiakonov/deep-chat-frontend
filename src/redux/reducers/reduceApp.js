@@ -1,4 +1,4 @@
-import { APP } from '../../constants'
+import { APP } from '../constants'
 
 const INITIAL_STATE = {
     loading: false,

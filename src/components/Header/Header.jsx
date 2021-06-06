@@ -19,7 +19,7 @@ const Header = ({ push }) => {
                         localStorage.clear()
                         push('/auth/login')
                     }}>
-                    Выйти
+                    Вийти
                 </button>
             </div>
         </header>

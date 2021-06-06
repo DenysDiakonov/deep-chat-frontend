@@ -50,8 +50,8 @@ class Login extends Component {
             <form
                 className='auth_form'
                 onSubmit={handleSubmit(this.submitForm)}>
-                <h1 className='auth_form__title'>Авторизация</h1>
-                <p className='auth_form__subtitle'>Войдите в свой аккаунт</p>
+                <h1 className='auth_form__title'>Авторизація</h1>
+                <p className='auth_form__subtitle'>Увійдіть в свій акаунт</p>
                 <Field
                     name='username'
                     type='text'
@@ -71,7 +71,7 @@ class Login extends Component {
                         disabled={submitting || pristine || !valid}
                         loading={loading}
                         formAction>
-                        Войти
+                        Увійти
                     </DefaultButton>
                     {authError ? (
                         <TooltipMessage
@@ -86,7 +86,7 @@ class Login extends Component {
                         ''
                     )}
                 </div>
-                <Link to={'/auth/register'}>Регистрация</Link>
+                <Link to={'/auth/register'}>Реєстрація</Link>
             </form>
         )
     }
@@ -95,12 +95,12 @@ class Login extends Component {
 const validate = values => {
     const errors = {}
     if (!values.username) {
-        errors.username = 'Обязательное поле'
+        errors.username = "Обов'язкове поле"
     }
     if (!values.password) {
-        errors.password = 'Обязательное поле'
+        errors.password = "Обов'язкове поле"
     } else if (values.password.length < 3) {
-        errors.password = 'Должно быть 3 или более символов'
+        errors.password = 'Має бути 3 або більше символів'
     }
     return errors
 }

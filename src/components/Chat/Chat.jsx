@@ -5,7 +5,7 @@ import DefaultButton from '../HelperComponents/Buttons/DefaultButton/DefaultButt
 import './Chat.scss'
 import Messages from './Messages'
 import { connect } from 'react-redux'
-import { getNewMessage } from '../../redux/actions/clientsActions'
+import { getNewMessage, addToHistory } from '../../redux/actions/clientsActions'
 import ReconnectingWebSocket from 'reconnecting-websocket'
 
 import sendIcon from '../../assets/image/send.svg'
@@ -23,12 +23,15 @@ class Chat extends Component {
 
     componentDidMount() {
         const {
+            getNewMessage,
+            addToHistory,
             match: {
                 params: { id },
             },
-            getNewMessage,
         } = this.props
         const { connected } = this.state
+
+        addToHistory(id)
 
         this.rws.addEventListener('open', () => {
             console.log('connected')
@@ -66,7 +69,7 @@ class Chat extends Component {
     }
 
     render() {
-        const { scrollTo, loading } = this.state
+        const { loading } = this.state
         const {
             messagesList,
             handleSubmit,
@@ -85,7 +88,7 @@ class Chat extends Component {
                         onClick={() => history.goBack()}
                         aria-label='Вернуться назад'
                     />
-                    <h1 className='chat_page__title'>Room {id}</h1>
+                    <h1 className='chat_page__title'>Кімната "{id}"</h1>
                 </header>
                 {loading ? (
                     <div style={{ marginTop: '220px' }}>
@@ -107,10 +110,10 @@ class Chat extends Component {
                             name='text'
                             type='text'
                             component={RenderField}
-                            placeholder='Введите сообщение...'
+                            placeholder='Введіть повідомлення...'
                         />
                         <DefaultButton formAction disabled={!textValue}>
-                            <span>Отправить</span>
+                            <span>Надіслати</span>
                             <img src={sendIcon} alt='Отправить' />
                         </DefaultButton>
                     </form>
@@ -144,6 +147,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     getNewMessage,
     reset: () => reset('ChatForm'),
+    addToHistory,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Chat)

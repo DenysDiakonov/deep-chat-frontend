@@ -1,4 +1,4 @@
-import { AUTH } from '../../constants'
+import { AUTH } from '../constants'
 
 export function postLogin(data) {
     return {
